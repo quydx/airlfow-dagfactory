@@ -12,8 +12,8 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = "dag-factory"
-PKG_NAME = "dagfactory"
+NAME = "airflow-dagfactory"
+PKG_NAME = "airflow_dagfactory"
 DESCRIPTION = "Dynamically build Airflow DAGs from YAML files"
 URL = "https://github.com/quydx/dag-factory"
 EMAIL = "quybulu@gmail.com"
@@ -26,7 +26,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 REQUIRED = [
     "apache-airflow[http,kubernetes]==2.9.1",
     "pyyaml",
-    "packaging"
+    "packaging",
 ]
 DEV_REQUIRED = ["black", "pytest", "pylint", "pytest-cov", "tox"]
 

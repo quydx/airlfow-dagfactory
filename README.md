@@ -1,4 +1,4 @@
-# dag-factory
+# airflow-dagfactory
 
 [![Github Actions](https://github.com/ajbosco/dag-factory/workflows/build/badge.svg?branch=master&event=push)](https://github.com/ajbosco/dag-factory/actions?workflow=build)
 [![Coverage](https://codecov.io/github/ajbosco/dag-factory/coverage.svg?branch=master)](https://codecov.io/github/ajbosco/dag-factory?branch=master)
@@ -14,11 +14,11 @@
   
 ## Installation
 
-To install *dag-factory* run `pip install dag-factory`. It requires Python 3.6.0+ and Apache Airflow 2.0+.
+To install *dag-factory* run `pip install airflow-dagfactory`. It requires Python 3.10.0+ and Apache Airflow 2.9.1+.
 
 ## Usage
 
-After installing *dag-factory* in your Airflow environment, there are two steps to creating DAGs. First, we need to create a YAML configuration file. For example:
+After installing *airflow-dagfactory* in your Airflow environment, there are two steps to creating DAGs. First, we need to create a YAML configuration file. For example:
 
 ```yaml
 example_dag1:
@@ -57,9 +57,9 @@ Then in the DAGs folder in your Airflow environment you need to create a python 
 
 ```python
 from airflow import DAG
-import dagfactory
+import airflow_dagfactory
 
-dag_factory = dagfactory.DagFactory("/path/to/dags/config_file.yml")
+dag_factory = airflow_dagfactory.DagFactory("/path/to/dags/config_file.yml")
 
 dag_factory.clean_dags(globals())
 dag_factory.generate_dags(globals())
@@ -71,7 +71,7 @@ If you have several configuration files you can import them like this:
 
 ```python
 # 'airflow' word is required for the dagbag to parse this file
-from dagfactory import load_yaml_dags
+from airflow_dagfactory import load_yaml_dags
 
 load_yaml_dags(globals_dict=globals(), suffix=['dag.yaml'])
 ```
@@ -117,3 +117,8 @@ task_2:
 ## Contributing
 
 Contributions are welcome! Just submit a Pull Request or Github Issue.
+
+
+**Upload Pypi**  
+`python setup.py sdist bdist_wheel `   
+`python -m twine upload  dist/*  --verbose`
