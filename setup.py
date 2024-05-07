@@ -24,7 +24,7 @@ VERSION = None
 here = os.path.abspath(os.path.dirname(__file__))
 
 REQUIRED = [
-    "apache-airflow[http,kubernetes]==2.8.3",
+    "apache-airflow[http,kubernetes]==2.8.1",
     "apache-airflow-providers-cncf-kubernetes==8.2.0",
     "kubernetes==29.0.0",
     "pyyaml",
