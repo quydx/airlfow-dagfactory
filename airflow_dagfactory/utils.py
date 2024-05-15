@@ -12,7 +12,7 @@ import yaml
 
 import pendulum
 
-from dagfactory.exceptions import DagFactoryException
+from airflow_dagfactory.exceptions import DagFactoryException
 
 
 def get_datetime(

@@ -9,8 +9,8 @@ import yaml
 from airflow.configuration import conf as airflow_conf
 from airflow.models import DAG
 
-from dagfactory.dagbuilder import DagBuilder
-from dagfactory.exceptions import DagFactoryException, DagFactoryConfigException
+from airflow_dagfactory.dagbuilder import DagBuilder
+from airflow_dagfactory.exceptions import DagFactoryException, DagFactoryConfigException
 
 
 # these are params that cannot be a dag name

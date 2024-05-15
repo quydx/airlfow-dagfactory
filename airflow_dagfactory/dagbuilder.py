@@ -80,8 +80,8 @@ except ImportError:
 
 from kubernetes.client.models import V1Container, V1Pod
 
-from dagfactory.exceptions import DagFactoryException, DagFactoryConfigException
-from dagfactory import utils
+from airflow_dagfactory.exceptions import DagFactoryException, DagFactoryConfigException
+from airflow_dagfactory import utils
 
 # pylint: disable=ungrouped-imports,invalid-name
 # Disabling pylint's ungrouped-imports warning because this is a
